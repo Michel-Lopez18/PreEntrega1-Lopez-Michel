@@ -27,3 +27,60 @@ if (seleccion == "si") {
 } else if (seleccion == "no") {
   alert("Gracias por su tiempo, hasta luego!!");
 }
+
+while (seleccion == "si") {
+  let producto = prompt("Agregue un producto a su carrito");
+  let precio = 0;
+
+  if (
+    producto == "camisas" ||
+    producto == "remeras" ||
+    producto == "buzos" ||
+    producto == "mallas" ||
+    producto == "bermudas"
+  ) {
+    switch (producto) {
+      case "camisas":
+        precio = 2000;
+        break;
+      case "remeras":
+        precio = 900;
+        break;
+      case "buzos":
+        precio = 2500;
+        break;
+      case "mallas":
+        precio = 1200;
+        break;
+      case "bermudas":
+        precio = 1000;
+      default:
+        break;
+    }
+    let unidades = Number(prompt("¿Cuántas unidades desea llevar?"));
+
+    carrito.push({ producto, unidades, precio });
+    console.log(carrito);
+  } else {
+    alert("No está disponible ese producto");
+  }
+
+  seleccion = prompt("¿Desea seguir comprando?");
+
+  while (seleccion == "no") {
+    alert("Gracias por su compra! Hasta luego");
+    carrito.forEach((carritoFinal) =>
+      console.log(
+        `producto: ${carritoFinal.producto}, unidades ${
+          carritoFinal.unidades
+        }, total a pagar por producto ${
+          carritoFinal.unidades * carritoFinal.precio
+        }`
+      )
+    );
+    break;
+  }
+}
+
+const total = carrito.reduce((acc, el) => acc + el.precio * el.unidades, 0);
+console.log(`El total de su compra a pagar es: ${total}`);
