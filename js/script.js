@@ -64,7 +64,7 @@ while (seleccion == "si") {
     // let resultado = productos.find((prod) => prod.nombre === producto);
     // carrito.push(resultado);
 
-    //NO ENTIENDO COMO HACER QUE FUNCIONE EL FIND, YA QUE SI CAMBIO EL SWITCH POR EL FIND, NO ME LOGRA DECIR EL TOTAL//
+    //NO ENTIENDO COMO HACER QUE FUNCIONE EL FIND, YA QUE SI CAMBIO EL SWITCH POR EL FIND, NO ME LOGRA DECIR EL TOTAL, NO LOGRO HACERLO//
 
     let unidades = Number(prompt("¿Cuántas unidades desea llevar?"));
 
