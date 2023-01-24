@@ -1,10 +1,13 @@
 const productos = [
-  { nombre: "camisas", precio: 2000 },
-  { nombre: "remeras", precio: 900 },
-  { nombre: "buzos", precio: 2500 },
-  { nombre: "mallas", precio: 1200 },
-  { nombre: "bermudas", precio: 1000 },
+  { id: 1, nombre: "camisas", precio: 2000 },
+  { id: 2, nombre: "remeras", precio: 900 },
+  { id: 3, nombre: "buzos", precio: 2500 },
+  { id: 4, nombre: "mallas", precio: 1200 },
+  { id: 5, nombre: "bermudas", precio: 1000 },
 ];
+
+console.log(productos.length);
+
 let carrito = [];
 
 let seleccion = prompt(
@@ -57,6 +60,12 @@ while (seleccion == "si") {
       default:
         break;
     }
+
+    // let resultado = productos.find((prod) => prod.nombre === producto);
+    // carrito.push(resultado);
+
+    //NO ENTIENDO COMO HACER QUE FUNCIONE EL FIND, YA QUE SI CAMBIO EL SWITCH POR EL FIND, NO ME LOGRA DECIR EL TOTAL//
+
     let unidades = Number(prompt("¿Cuántas unidades desea llevar?"));
 
     carrito.push({ producto, unidades, precio });
